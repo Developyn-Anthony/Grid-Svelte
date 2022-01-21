@@ -1,5 +1,6 @@
 <script>
 	import  Clock  from './components/clock.svelte'
+	import  Login  from './components/signup.svelte'
 </script>
 
 <div id="app">
@@ -7,7 +8,9 @@
 		<div class="grid-item grid-item1">
 			<Clock />
 		</div>
-		<div class="grid-item grid-item2">f</div>
+		<div class="grid-item grid-item2">
+			<Login />
+		</div>
 		<div class="grid-item grid-item3">f</div>
 		<div class="grid-item grid-item4">
 			f<!--<Table :peoples="people" @delete-task="deleteTask"/>-->
