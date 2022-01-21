@@ -2,6 +2,7 @@
 	import  Clock  from './components/clock.svelte'
 	import  Login  from './components/signup.svelte'
 	import  Quest  from './components/questions.svelte'
+	import  Table  from './components/table.svelte'
 </script>
 
 <div id="app">
@@ -16,7 +17,7 @@
 			<Quest />
 		</div>
 		<div class="grid-item grid-item4">
-			f<!--<Table :peoples="people" @delete-task="deleteTask"/>-->
+			<Table />
 		</div>
 		<div class="grid-item grid-item5">
 			f<!--<TableSubmit @submit="addNewRow" />-->
