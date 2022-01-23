@@ -8,7 +8,7 @@
         rows_value = value;
     });
 
-    function removeRow(index) {
+    let removeRow = (index) => {
         rows.set(rows_value.filter((row) => row != index));
     }
 </script>
@@ -27,10 +27,16 @@
             {#each rows_value as row}
                 <tr class="remove-row">
                     {#each row as cell}
-                        <td class="row-data" contenteditable="true" bind:innerHTML={cell} />
+                        <td
+                            class="row-data"
+                            contenteditable="true"
+                            bind:innerHTML={cell}
+                        />
                     {/each}
                     <td>
-                        <button class="del-btn" on:click={removeRow(row)}>X</button></td
+                        <button class="del-btn" on:click={removeRow(row)}
+                            >X</button
+                        ></td
                     >
                 </tr>
             {/each}
@@ -45,6 +51,7 @@
         height: auto;
         margin-left: auto;
         margin-right: auto;
+        border: none;
     }
 
     .row-data {
@@ -52,10 +59,21 @@
     }
 
     .del-btn {
-        width: 2rem;
-        height: 2rem;
         border-radius: 50%;
         background-color: darkred;
         color: #fff;
+        width: 3rem;
+        height: 3rem;
+        font-size: 18pt;
+        cursor: pointer;
+    }
+
+    .remove-row td:nth-child(4) {
+        border-color: transparent;
+        text-align: center;
+    }
+
+    .change-column th:nth-child(4) {
+        border-color: transparent;
     }
 </style>

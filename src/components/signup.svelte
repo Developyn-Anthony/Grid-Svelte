@@ -53,7 +53,7 @@
         />
     </div>
     <div>
-        <button id="submit" type="submit" on:click|preventDefault={login}
+        <button id="submit" type="submit" class="submit-btn" on:click|preventDefault={login}
             >Submit</button
         >
         {#if loggedIn}
@@ -126,5 +126,25 @@
         margin-right: auto;
         margin-top: 1rem;
         font-size: small;
+    }
+
+    .submit-btn {
+        background-color: teal;
+        width: 30%;
+        height: 2rem;
+        border: 0.1rem #fff solid;
+        color: white;
+        border-radius: 1.5rem;
+        transition-duration: 0.5s;
+    }
+
+    .submit-btn:hover {
+        background-color: #004e4f;/*DarkTeal*/
+        width: 35%;
+        height: 2rem;
+        border: 0.1rem #fff solid;
+        color: white;
+        border-radius: 1.5rem;
+        transition-duration: 0.5s;
     }
 </style>

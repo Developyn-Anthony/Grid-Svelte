@@ -3,6 +3,7 @@
 	import  Login  from './components/signup.svelte'
 	import  Quest  from './components/questions.svelte'
 	import  Table  from './components/table.svelte'
+	import  SubmitTable  from './components/submitTable.svelte'
 </script>
 
 <div id="app">
@@ -20,7 +21,7 @@
 			<Table />
 		</div>
 		<div class="grid-item grid-item5">
-			f<!--<TableSubmit @submit="addNewRow" />-->
+			<SubmitTable />
 		</div>
 		<div class="grid-item grid-item6">f</div>
 		<div class="grid-item grid-item7">f</div>

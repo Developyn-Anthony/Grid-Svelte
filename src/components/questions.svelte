@@ -42,11 +42,11 @@
         }, 0);
         return (score / questions.length) * 100 + "%";
     };
-    function restartQuiz() {
+    let restartQuiz = () => {
         answers = new Array(questions.length).fill(null);
         questionPointer = 0;
     }
-    function sound() {
+    let sound = () => {
     if (questionPointer === 4) {
       let sound = new Audio(soundUrl);
       sound.play();
@@ -149,11 +149,22 @@
     }
 
     .quest-button {
-        background-color: darkgreen;
+        background-color: teal;
         width: 30%;
         height: 2rem;
         border: 0.1rem #fff solid;
         color: white;
         border-radius: 1.5rem;
+        transition-duration: 0.5s;
+    }
+
+    .quest-button:hover {
+        background-color: #004e4f;/*DarkTeal*/
+        width: 35%;
+        height: 2rem;
+        border: 0.1rem #fff solid;
+        color: white;
+        border-radius: 1.5rem;
+        transition-duration: 0.5s;
     }
 </style>
