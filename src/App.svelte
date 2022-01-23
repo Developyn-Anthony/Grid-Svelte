@@ -5,6 +5,7 @@
 	import  Table  from './components/table.svelte'
 	import  SubmitTable  from './components/submitTable.svelte'
 	import  Orders  from './components/orders.svelte'
+	import  Search  from './components/search.svelte'
 </script>
 
 <div id="app">
@@ -27,7 +28,9 @@
 		<div class="grid-item grid-item6">
 			<Orders />
 		</div>
-		<div class="grid-item grid-item7">f</div>
+		<div class="grid-item grid-item7">
+			<Search />
+		</div>
 		<div class="grid-item grid-item8">f</div>
 		<div class="grid-item grid-item9">f</div>
 	</div>
