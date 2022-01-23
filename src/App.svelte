@@ -4,6 +4,7 @@
 	import  Quest  from './components/questions.svelte'
 	import  Table  from './components/table.svelte'
 	import  SubmitTable  from './components/submitTable.svelte'
+	import  Orders  from './components/orders.svelte'
 </script>
 
 <div id="app">
@@ -23,7 +24,9 @@
 		<div class="grid-item grid-item5">
 			<SubmitTable />
 		</div>
-		<div class="grid-item grid-item6">f</div>
+		<div class="grid-item grid-item6">
+			<Orders />
+		</div>
 		<div class="grid-item grid-item7">f</div>
 		<div class="grid-item grid-item8">f</div>
 		<div class="grid-item grid-item9">f</div>
