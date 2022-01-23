@@ -6,6 +6,7 @@
 	import  SubmitTable  from './components/submitTable.svelte'
 	import  Orders  from './components/orders.svelte'
 	import  Search  from './components/search.svelte'
+	import  GridToggle  from './components/gridToggle.svelte'
 </script>
 
 <div id="app">
@@ -31,7 +32,9 @@
 		<div class="grid-item grid-item7">
 			<Search />
 		</div>
-		<div class="grid-item grid-item8">f</div>
+		<div class="grid-item grid-item8">
+			<GridToggle />
+		</div>
 		<div class="grid-item grid-item9">f</div>
 	</div>
 </div>
