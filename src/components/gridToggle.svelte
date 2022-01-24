@@ -1,5 +1,5 @@
 <script>
-    let layout = "grid";
+    let layout = "list";
     let layoutGridList = [
         {
             name: "Farming Sim 22",
@@ -42,10 +42,10 @@
 
 <div id="switch-grid-list">
     <div class="switchbar">
-      <button class="list-swh" on:click={layout.list} bind="{ layout == 'list' }" title="List">
+      <button class="list-grid-buttons" on:click={layout.list} bind="{ layout == 'list' }" title="List">
         List
       </button>
-      <button class="grid-swh" on:click={layout.grid} bind="{ layout == 'grid' }" title="Grid">
+      <button class="list-grid-buttons" on:click={layout.grid} bind="{ layout == 'grid' }" title="Grid">
         Grid
       </button>
     </div>
@@ -62,7 +62,7 @@
     <ul class="list">
         {#each layoutGridList as layouts}
             <li class="list-li">
-                <a class="list-li-anchor" ><img class="list-li-img" :src={layouts.img.small} />
+                <a class="list-li-anchor" ><img class="list-li-img" src={layouts.img.small} alt="Game Images"/>
                 <p class="list-li-p">{ layouts.name }</p>
              </a>
             </li>
@@ -84,29 +84,24 @@
         margin-left: auto;
         margin-right: auto;
     }
-    .list-swh {
-        margin-right: 1rem;
-        background-color: white;
-        color: black;
-        width: 20%;
-        font-size: 11pt;
-        height: 2rem;
-        cursor: pointer;
-        border-radius: 1rem;
-    }
-    .list-swh:hover,
-    .grid-swh:hover {
+    .list-grid-buttons {
         background-color: teal;
-        color: white;
-        transition-duration: 0.8s;
-    }
-    .grid-swh {
-        background-color: white;
-        width: 20%;
-        font-size: 11pt;
+        width: 30%;
         height: 2rem;
-        cursor: pointer;
-        border-radius: 1rem;
+        border: 0.1rem #fff solid;
+        color: white;
+        border-radius: 1.5rem;
+        transition-duration: 0.5s;
+    }
+
+    .list-grid-buttons:hover {
+        background-color: #004e4f;/*DarkTeal*/
+        width: 35%;
+        height: 2rem;
+        border: 0.1rem #fff solid;
+        color: white;
+        border-radius: 1.5rem;
+        transition-duration: 0.5s;
     }
     /* panel 8 grid */
     .grid {
@@ -128,7 +123,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 50%;
+        height: 70%;
         border-radius: 0.2rem;
         position: absolute;
         width: 100%;
@@ -167,25 +162,13 @@
     }
     /* Media queries */
     /* small devices */
-    @media only screen and (min-width: 500px) {
-        .game-imgs {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            padding-right: 10rem;
-        }
+    @media only screen and (min-width: 700px) {
         .grid-list-anchor {
             height: 80%;
         }
     }
     /* Large devices (laptops/desktops, 992px and up) */
     @media only screen and (min-width: 992px) {
-        .game-imgs {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            padding-right: 10rem;
-        }
         .grid-list-anchor {
             height: 80%;
         }

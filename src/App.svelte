@@ -7,6 +7,7 @@
 	import  Orders  from './components/orders.svelte'
 	import  Search  from './components/search.svelte'
 	import  GridToggle  from './components/gridToggle.svelte'
+	import  Ball  from './components/ball.svelte'
 </script>
 
 <div id="app">
@@ -35,7 +36,9 @@
 		<div class="grid-item grid-item8">
 			<GridToggle />
 		</div>
-		<div class="grid-item grid-item9">f</div>
+		<div class="grid-item grid-item9">
+			<Ball />
+		</div>
 	</div>
 </div>
 
