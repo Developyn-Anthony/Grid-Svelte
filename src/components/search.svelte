@@ -11,6 +11,7 @@
     $: games = games.filter((game) =>
         game.name.toLowerCase().includes(search.toLowerCase())
     );
+    
 </script>
 
 <div id="search">

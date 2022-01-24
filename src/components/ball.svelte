@@ -36,7 +36,7 @@
             <div class="question-game">
                 <input bind:value={question} placeholder=" Ask:" />
             </div>
-            <button type="submit">Submit</button>
+            <button class="quest-button" type="submit">Submit</button>
         </form>
         <div class="circle">
             <img src={image} alt="Magic 8 Ball" />
@@ -79,19 +79,31 @@
       display: flex;
       flex-direction: row;
     }
-    .question-box button {
-      background-color: #0a1813;
-      color: white;
-      border: none;
-      cursor: pointer;
-      width: 10.125rem;
-      height: 2.5rem;
-      margin-right: 0.5rem;
-    }
+    
     .question-box input {
       width: 9rem;
       height: 2rem;
       margin-left: 0.2rem;
+    }
+
+    .quest-button {
+        background-color: teal;
+        width: 30%;
+        height: 2rem;
+        border: 0.1rem #fff solid;
+        color: white;
+        border-radius: 1.5rem;
+        transition-duration: 0.5s;
+    }
+
+    .quest-button:hover {
+        background-color: #004e4f;/*DarkTeal*/
+        width: 35%;
+        height: 2rem;
+        border: 0.1rem #fff solid;
+        color: white;
+        border-radius: 1.5rem;
+        transition-duration: 0.5s;
     }
     /* Extra large devices (large laptops and desktops, 1200px and up) */
     @media only screen and (min-width: 1279px) {

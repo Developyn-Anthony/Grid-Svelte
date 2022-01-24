@@ -29,7 +29,7 @@
         <div>
             <ul class="item-list">
                 {#each products as product}
-                    <li class="list-items" value="product">
+                    <li class="list-items" value={product}>
                         <label class="switch">
                             <input type="checkbox" />
                             <span class="slider" on:click={toggle(product)} />
